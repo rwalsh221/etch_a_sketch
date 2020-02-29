@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html {
+    font-family: 'Coda Caption';
+    font-size: 62.5%; }
+  
+body {
+    height: 100vh;
+    background-color: #ffee82;
+    box-sizing: border-box;
+}
+
+.full__grid {
+    display: grid;
+    grid-template-areas: "head" 
+                          "main"
+                          "foot";
+
+    grid-template-rows: 10vh 80vh 10vh;
+}
+
+.heading__main, 
+.foot {
+    color: #fda403;
+}
+
+.heading__main {
+    font-size: 3.5rem;
+}
+
+.foot {
+    font-size: 2rem;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.etch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding:  0 14rem;
+    height: 95vh;
+    background-color: #b31313;
+    border-radius: 3rem;
+    box-shadow: 2rem 2rem 2rem black, 2rem 2rem 2rem #fda403, inset 2rem 2rem 2rem #d01e1e, inset -2rem -2rem 2rem #d01e1e ;
+    position: relative;
+}
+
+.etch__container {
+    margin: 0 auto;
+    height: 70rem;
+    width: 70rem;
+    background-color: black;
+    z-index: 100;
+    flex-grow: 0;
+    
+    display: grid;
+}
+
+.etch__container > div {
+    border: 1px solid #fda403 ;
+    background-color: #ede29e;
+   
+}
+
+.btn {
+    position: absolute;
+    
+    bottom: 1rem;
+    padding: 4rem;
+    border-radius: 100%;
+    box-shadow: .5rem .5rem 1rem black;
+    outline: none;
+    background-color: #fff6bd;
+    border: 2px solid #ffee82;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: 'Coda Caption';
+    color: #b31313;
+}
+
+.btn-left {
+    left: 1rem;
+}
+
+.btn-right {
+    right: 1rem;
+}
+
+.btn:after {
+    content: "";
+    background: #fda403;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -50px!important;
+    margin-top: -160%;
+    opacity: 0;
+    transition: all 1s;
+    border-radius: 100%;
+  }
+  
+  .btn:hover:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
