@@ -37,6 +37,25 @@ let userPrompt = function() {
         createGrid.setAttribute('onmouseover', 'mouseOver(this.id)')
         etchContainer.appendChild(createGrid);
         // document.querySelector(`.iden-${i}`).style.cssText = `background-color: black;`;
+        
+        
+        // BORDER RADIUS TEST - WORKS KIND OF
+        // USED OVERFLOW HIDDEN ON PARENT
+
+    //     if (i === 1) {
+    //         createGrid.setAttribute('style', `border-top-left-radius: ${etchSize}rem;`)
+    //         console.log('i = 1');
+    //         console.log(userGridSize);
+    //     } else if (i === Number(userGridSize)) {
+    //         createGrid.setAttribute('style', 'border-top-right-radius: 5rem;')
+    //         console.log('i = usergridsize');
+    //     } else if (i === (etchSize - Number(userGridSize)) + 1) {
+    //         createGrid.setAttribute('style', 'border-bottom-left-radius: 5rem;')
+    //         console.log('i = working');
+    //     } else if (i === etchSize) {
+    //         createGrid.setAttribute('style', 'border-bottom-right-radius: 5rem;')
+    //         console.log('i = etchsize');
+    //     }
     };
 };
 
@@ -135,15 +154,13 @@ mouseOver = function(id) {
     const randomColor3 = Math.floor(Math.random() * 255) + 1;
     
     if(document.getElementById(id).getAttribute("style")==null || document.getElementById(id).getAttribute("style")=="background-color: rgb(237, 226, 158); opacity: 1;")    {
-        // randomColor1 = Math.floor(Math.random() * 255) + 1;
-        // randomColor2 = Math.floor(Math.random() * 255) + 1;
-        // randomColor3 = Math.floor(Math.random() * 255) + 1;
-        console.log('in if block')
+        
         document.getElementById(id).style.backgroundColor = `rgba(${randomColor1},${randomColor2},${randomColor3})`;
         document.getElementById(id).style.opacity = 1
+
     } else if (document.getElementById(id).style.opacity > 0) {
         document.getElementById(id).style.opacity -= .1;
-        console.log('in if else')
+        
     } 
 
 };

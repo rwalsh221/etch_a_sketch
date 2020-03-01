@@ -28,6 +28,8 @@ body {
 .heading__main, 
 .foot {
     color: #fda403;
+    border: 5px solid darkred;
+
 }
 
 .heading__main {
@@ -56,6 +58,8 @@ main {
     border-radius: 3rem;
     box-shadow: 2rem 2rem 2rem black, 2rem 2rem 2rem #fda403, inset 2rem 2rem 2rem #d01e1e, inset -2rem -2rem 2rem #d01e1e ;
     position: relative;
+    border: 5px solid darkred;
+
 }
 
 .etch__container {
@@ -65,13 +69,17 @@ main {
     background-color: black;
     z-index: 100;
     flex-grow: 0;
-    
+    overflow: hidden;
     display: grid;
+
+    border-radius: 5rem;
+    border: 5px solid darkred;
 }
 
 .etch__container > div {
     border: 1px solid #fda403 ;
     background-color: #ede29e;
+    overflow: hidden;
    
 }
 
@@ -111,11 +119,26 @@ main {
     opacity: 0;
     transition: all 1s;
     border-radius: 100%;
-  }
-  
+}
+
   .btn:hover:after {
     padding: 0;
     margin: 0;
     opacity: 1;
     transition: 0s;
-  }
+}
+/* 
+#iden-1 {
+border-top-left-radius: 5rem;
+} */
+
+/* #iden-10 {
+border-top-right-radius: 5rem;
+} */
+/* #iden-91 {
+border-bottom-left-radius: 5rem;
+}
+#iden-100 {
+border-bottom-right-radius: 5rem;
+} 
+     */
