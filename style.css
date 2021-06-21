@@ -3,145 +3,155 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 html {
-    font-family: 'Coda Caption';
-    font-size: 62.5%; }
-  
-body {
-    height: 100vh;
-    background-color: #ffee82;
-    box-sizing: border-box;
+  font-family: 'Coda Caption';
+  font-size: 62.5%;
 }
 
-/* .full__grid {
-    display: grid;
-    grid-template-areas: "head" 
-                          "main"
-                          "foot";
+body {
+  height: 100vh;
+  background-color: #ffee82;
+  box-sizing: border-box;
+}
 
-    grid-template-rows: 10vh 80vh 10vh;
-} */
-
-.heading__main, 
+.heading__main,
 .foot {
-    color: #fda403;
-    border: 5px solid darkred;
-
+  color: #fda403;
+  border: 5px solid darkred;
 }
 
 .heading__main {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
+  margin: 1rem 0;
 }
 
 .foot {
-    font-size: 2rem;
-    margin-top: 2rem;
+  font-size: 2rem;
+  margin: 1rem 0;
 }
 
 main {
-    /* grid-area: main; */
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .etch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding:  0 14rem;
-    height: 95vh;
-    background-color: #b31313;
-    border-radius: 3rem;
-    box-shadow: 2rem 2rem 2rem black, 2rem 2rem 2rem #fda403, inset 2rem 2rem 2rem #d01e1e, inset -2rem -2rem 2rem #d01e1e ;
-    position: relative;
-    border: 5px solid darkred;
-
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 14rem;
+  max-height: 95vh;
+  min-height: max-content;
+  width: 55%;
+  background-color: #b31313;
+  border-radius: 3rem;
+  box-shadow: 2rem 2rem 2rem black, 2rem 2rem 2rem #fda403,
+    inset 2rem 2rem 2rem #d01e1e, inset -2rem -2rem 2rem #d01e1e;
+  position: relative;
+  border: 5px solid darkred;
 }
 
 .etch__container {
-    margin: 0 auto;
-    height: 70rem;
-    width: 70rem;
-    background-color: black;
-    z-index: 100;
-    flex-grow: 0;
-    overflow: hidden;
-    display: grid;
-   
-
-    border-radius: 5rem;
-    border: 5px solid darkred;
+  margin: 0 auto;
+  height: 70rem;
+  width: 100%;
+  background-color: black;
+  z-index: 100;
+  flex-grow: 0;
+  overflow: hidden;
+  display: grid;
+  border-radius: 5rem;
+  border: 5px solid darkred;
 }
 
 .etch__container > div {
-    border: 1px solid #fda403 ;
-    background-color: #ede29e;
-    overflow: hidden;
-   
+  border: 1px solid #fda403;
+  background-color: #ede29e;
+  overflow: hidden;
 }
 
 .btn {
-    position: absolute;
-    
-    bottom: 1rem;
-    padding: 4rem;
-    border-radius: 100%;
-    box-shadow: .5rem .5rem 1rem black;
-    outline: none;
-    background-color: #fff6bd;
-    border: 2px solid #ffee82;
-    overflow: hidden;
-    cursor: pointer;
-    font-family: 'Coda Caption';
-    color: #b31313;
+  position: absolute;
+  bottom: 1rem;
+  padding: 4rem;
+  border-radius: 100%;
+  box-shadow: 0.5rem 0.5rem 1rem black;
+  outline: none;
+  background-color: #fff6bd;
+  border: 2px solid #ffee82;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: 'Coda Caption';
+  color: #b31313;
+  transition: all 0.5s;
 }
 
 .btn-left {
-    left: 1rem;
+  left: 1rem;
 }
 
 .btn-right {
-    right: 1rem;
+  right: 1rem;
 }
 
-.btn:after {
-    content: "";
-    background: #fda403;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -50px!important;
-    margin-top: -160%;
-    opacity: 0;
-    transition: all 1s;
-    border-radius: 100%;
+.btn:hover {
+  background-color: #fda403;
 }
 
-  .btn:hover:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s;
+@media screen and (max-width: 1366px) {
+  .etch {
+    width: 80%;
+  }
 }
-/* 
-#iden-1 {
-border-top-left-radius: 5rem;
-} */
 
-/* #iden-10 {
-border-top-right-radius: 5rem;
-} */
-/* #iden-91 {
-border-bottom-left-radius: 5rem;
+@media screen and (max-width: 1024px) {
+  .etch {
+    width: 90%;
+  }
 }
-#iden-100 {
-border-bottom-right-radius: 5rem;
-} 
-     */
+
+@media screen and (max-width: 768px) {
+  .etch {
+    width: 98%;
+    padding: 2rem 10rem;
+  }
+
+  html {
+    font-size: 50%;
+  }
+
+  .btn {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 20%;
+  }
+
+  .btn {
+    padding: 1rem;
+    font-size: 3rem;
+  }
+}
