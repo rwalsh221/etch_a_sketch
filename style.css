@@ -139,20 +139,32 @@ main {
   }
 }
 
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 35%;
+  }
+}
+
 @media screen and (max-width: 414px) {
   html {
     font-size: 30%;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 390px) {
   html {
-    font-size: 20%;
+    font-size: 25%;
   }
 
   .btn {
-    padding: 1rem;
+    padding: 1.5rem;
     font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 20%;
   }
 }
 
